@@ -61,3 +61,4 @@ module.exports = {
 //npm install --save gatsby-transformer-sharp gatsby-plugin-sharp
 //npm install --save gatsby-transformer-remark
 //npm install --save gatsby-plugin-prefetch-google-fonts
+//npm install --save gatsby-image

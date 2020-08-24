@@ -8,7 +8,9 @@ const Layout = ({ children }) => {
     return (
         // <>
             <div className={style.main}>
-                THIS IS THE LAYOUT 
+                <div>
+                    {children}
+                </div>
             </div>
         // {/* </> */}
     )

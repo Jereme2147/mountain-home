@@ -7,6 +7,7 @@ const Variables = {
     darkGrey: "#4f5d75ff",
     submit: "#0000FF",
   //LOGOS
+    landingImage: "roof1.jpg",
   gatsby: "gatsby-icon.png",
   wplogo: "wplogo.png",
   htmlCssJs: 'htmlcssjs.png',
