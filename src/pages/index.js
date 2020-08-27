@@ -3,11 +3,21 @@ import React from "react"
 import Layout from "../components/layout.js"
 import variables from '../components/variables.js'
 import BannerImage from '../components/bannerImage.js'
+import MenuBar from '../components/menuBar.js'
+import BannerText from '../components/bannerText.js'
+import PageContent from '../components/pageContent.js'
 
-export default function Home() {
+const Index = () => {
   return (
     <Layout>
-      <BannerImage banner={variables.landingImage}/>
+      <MenuBar />
+      <BannerImage banner={variables.landingImage} />
+      <BannerText />
+      <PageContent>
+        <h1>here we have some stuff</h1>
+      </PageContent>
     </Layout>
-  )
+  ) 
 }
+
+export default Index;

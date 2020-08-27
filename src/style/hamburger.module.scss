@@ -1,0 +1,78 @@
+@import './reset.scss';
+// add comments when you figure out the fuck menu1 does
+// .menu1 {
+//     width: 100%;
+// }
+.hamburger {
+  align-self: center;
+  z-index: 20;
+  // position: relative;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  // padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.isActive:hover {
+    opacity: 0.7; }
+  .hamburger.isActive .hamburgerInner,
+  .hamburger.isActive .hamburgerInner::before,
+  .hamburger.isActive .hamburgerInner::after {
+    background-color: $white; }
+
+.hamburgerBox {
+  width: 60px;
+  height: 44px;
+  display: inline-block;
+  position: relative; }
+
+.hamburgerInner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburgerInner, .hamburgerInner::before, .hamburgerInner::after {
+    width: 60px;
+    height: 6px;
+    background-color: $lightGrey;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburgerInner::before, .hamburgerInner::after {
+    content: "";
+    display: block; }
+  .hamburgerInner::before {
+    top: -15px; }
+  .hamburgerInner::after {
+    bottom: -15px; }
+
+
+/*
+   * Minus
+   */
+.minus .hamburgerInner::before, .minus .hamburgerInner::after {
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+
+.minus.isActive .hamburgerInner::before, .minus.isActive .hamburgerInner::after {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+
+.minus.isActive .hamburgerInner::before {
+  top: 0; }
+
+.minus.isActive .hamburgerInner::after {
+  bottom: 0; }
+

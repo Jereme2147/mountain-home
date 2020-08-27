@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
+//gatsby develop -H 0.0.0.0 (to view accross network)
 module.exports = {
   siteMetadata: {
     title: `Mountain Home Exteriors`,

@@ -19,7 +19,7 @@ const BannerImage = ({ banner }) => {
     }
   `) 
   return (
-    <div>
+    <div className={style.imageContainer}>
       {data.allImageSharp.nodes.map(item => {
         if (item.fluid.originalName === banner) {
           return (

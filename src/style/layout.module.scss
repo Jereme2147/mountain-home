@@ -2,6 +2,18 @@
 
 .main {
     width: 100%;
-    min-height: 100vh;
+    min-height: 200vh;
     background: $darkGrey;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include desktop() {
+        // flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
 }

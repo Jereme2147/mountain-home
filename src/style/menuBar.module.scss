@@ -1,0 +1,30 @@
+@import './reset.scss';
+.container {
+    @include desktop() {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        // flex-direction: column;
+        width: 20%;
+        background: $gradientMenu;
+        height: 100vh;
+        justify-content: center;
+        // align-items: center;
+        ul {
+            // margin-top: 200px;
+            // margin-left: 35px;
+            // width: 100%;
+            list-style: none;
+            font-size: 3rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
+            h2 {
+                text-shadow: 2px 2px 2px $white;
+            }
+        }
+    }
+    display: none;
+}
