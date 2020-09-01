@@ -14,7 +14,7 @@ const imageContainer = {
 const Services = () => {
     return (
       <div className={style.container}>
-        <h2>PROFESSIONAL SERVICES</h2>
+        <h2><span>-</span> PROFESSIONAL SERVICES <span>-</span></h2>
         <div className={style.serviceContainer}>
           <div className={style.imgContainer}>
             <Image
@@ -40,8 +40,6 @@ const Services = () => {
             </p>
           </div>
         </div>
-        SERVICES
-        {/* image left title & descrip right */}
       </div>
     )
 }

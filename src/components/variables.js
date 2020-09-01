@@ -1,5 +1,5 @@
 const pages = [
-  'Portfolio', 'Services', 'Contact'
+  'Portfolio', 'Services', 'Contact', 'Something'
 ]
 const Variables = {
   //colors

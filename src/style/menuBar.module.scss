@@ -7,19 +7,31 @@
         display: flex;
     // *** ANY ADJUSTMENT HERE MEANS ADJUSTMENT TO pageContent and bannerText
         width: 20%;
-        background: $gradientMenu;
+        // background: $gradientMenu; 
         height: 100vh;
         justify-content: center;
         // align-items: center;
+        margin-top: 200px;
         ul {
             list-style: none;
-            font-size: 3rem;
+            font-size: 2rem;
             display: flex;
             flex-direction: column;
             height: 100%;
-            justify-content: space-evenly;
+            // justify-content: space-evenly;
+            li {
+                margin: 30px 0;
+                padding-left: 10px;
+                border-left: 3px solid $orange;
+                transition: 0.4s;
+                &:hover {
+                    border-left: 13px solid $orange;
+                    padding-left: 0;
+                }
+            }
             h2 {
-                text-shadow: 2px 2px 2px $white;
+                text-shadow: 2px 2px 2px $black;
+                color: $white;
             }
         }
     }

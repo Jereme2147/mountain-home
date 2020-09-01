@@ -5,7 +5,7 @@ import React from 'react'
 import variables from '../components/variables'
 
 const menuItems = () => {
-    const pages = ["Portfolio", "Services", "Contact"]
+    // const pages = ["Portfolio", "Services", "Contact"]
     return (
       <ul>{variables.pages.map(page => {
        return (
