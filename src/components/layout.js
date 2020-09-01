@@ -3,7 +3,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import style from '../style/layout.module.scss'
-import Nav from '../components/Nav.js'
+import Nav from '../components/nav.js'
 
 
 const Layout = ({ children }) => {
