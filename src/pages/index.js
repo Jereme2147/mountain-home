@@ -6,6 +6,8 @@ import BannerImage from '../components/bannerImage.js'
 import MenuBar from '../components/menuBar.js'
 import BannerText from '../components/bannerText.js'
 import PageContent from '../components/pageContent.js'
+import ContentFrame from '../components/contentFrame.js'
+import Services from '../sections/services.js'
 
 const Index = () => {
   return (
@@ -14,7 +16,10 @@ const Index = () => {
       <BannerImage banner={variables.landingImage} />
       <BannerText />
       <PageContent>
-        <h1>here we have some stuff</h1>
+        {/* contentFrame with BBB and insuarnce type stuff */}
+        <ContentFrame>
+          <Services />
+        </ContentFrame>
       </PageContent>
     </Layout>
   ) 

@@ -18,6 +18,9 @@
         display: flex;
         justify-content: center;
     }
+    @include tablet() {
+        width: 30%;
+    }
     width: 50%;
     display: flex;
     justify-content: center;

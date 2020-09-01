@@ -7,6 +7,7 @@ $white: #ffffffff;
 $orange: #ef8354ff;
 $darkGrey: #4f5d75ff;
 $gradientMenu: linear-gradient(90deg, $lightGrey, $darkGrey);
+$gradientContentFrame: linear-gradient(180deg, $white, $lightGrey);
 //    FONTS
 $title: font-family 'Montserrat', sans-serif;
 $body: font-family 'Hind Madurai', sans-serif;
@@ -15,6 +16,12 @@ $menu: font-family 'Roboto', sans-serif;
 
 @mixin desktop {
     @media (min-width: 1050px) {
+        // @media (min-width: 1061px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: 600px) and (max-width: 1049px) {
         // @media (min-width: 1061px) {
         @content;
     }
@@ -67,6 +74,7 @@ h3,h4,h5,h6,p,li {
     font-family: $body;
 }
 p {
+    font-family: $body;
     padding-bottom: 5px;
 }
 /* SCSS Gradient */

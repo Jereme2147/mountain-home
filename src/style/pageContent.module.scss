@@ -1,6 +1,10 @@
 @import './reset.scss';
 
 .container {
-    background: black;
-    margin-left: 20%;
+    @include desktop() {
+        margin-left: 20%; //accomodates for menuBar width
+        width: 80%;
+    }
+    // background: black;
+
 }

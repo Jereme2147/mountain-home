@@ -13,5 +13,9 @@ const Variables = {
     logo: "logo.png",
     landingImage: 'roof1.jpg',
     pages: pages,
+  // images
+    greenRoof1: 'greenRoof1.JPG',
+    greenRoof2: 'greenRoof2.JPG',
+    greenRoof3: 'greenRoof3.JPG',
 }
 export default Variables

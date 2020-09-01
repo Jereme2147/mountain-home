@@ -2,20 +2,40 @@
 
 .container {
     @include desktop() {
-        margin-top: 200px;
-        margin-left: 35%;
+        margin-top: 200px; //all this is dependant on menuBar width
+        margin-left: 20%;
+        width: 80%;
     }
     position: absolute;
-    margin-top: 100px;
+    margin-top: 75px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     // margin-left: 35%;
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        color: $lightGrey;
+        padding: 10px;
+        text-align: center;
+        text-shadow: 3px 3px 2px black, 
+                    -1px -1px 0 $white;
         @include desktop() {
-            font-size: 4rem;
+            font-size: 5rem;
+        }
+    }
+    h2 {
+        color: $lightGrey;
+        font-size: 1.5rem;
+        // text-shadow:  -1px 0 0 $white;
+        text-shadow: 1px 1px 1px black, 
+                    -1px 0 0 $white; 
+        span {
+            color: $orange;
+        }
+        @include desktop() {
+            font-size: 2.5rem;
         }
     }
 }

@@ -1,0 +1,13 @@
+@import './reset.scss';
+// should be independant of anything. pageContent sets 
+// the positioning.  
+.frameContainer {
+    // position: relative;
+    // background: $gradientContentFrame;
+    margin: 10px;
+    border-radius: 3px;
+    // border: 3px solid ;
+    //temporary sizing for styling
+    height: 500px;
+    // width: 100%;
+}
