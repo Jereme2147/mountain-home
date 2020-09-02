@@ -2,7 +2,7 @@
 
 .main {
     width: 100%;
-    min-height: 200vh;
+    // min-height: 100vh;
     background: $darkGrey;
     display: flex;
     flex-direction: column;
@@ -16,4 +16,8 @@
         width: 100%;
         // justify-content: space-around;
     }
+}
+
+.footer {
+    // justify-self: flex-end;
 }

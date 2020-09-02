@@ -1,0 +1,64 @@
+@import './reset.scss';
+$footerBorder: 2px solid $orange;
+.container {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    // justify-self: flex-end;
+}
+.logoContainerContainer {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: $footerBorder;
+}
+.logoContainer {
+    @include desktop() {
+        width: 20%;
+    }
+    margin: 20px 0;
+    width: 60%;
+}
+.menuItems {
+    width: 75%;
+    border-bottom: $footerBorder;
+    padding-bottom: 10px;
+    ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desktop(){
+            flex-direction: row;
+        }
+        li {
+            width: 100%;
+            text-align: center;
+            color: $darkGrey;
+            font-size: 2rem;
+            margin: 10px 0;
+            // border-left: 5px solid $darkGrey;
+            // border-right: 5px solid $darkGrey;
+            h2 {
+                color: $darkGrey;
+            }
+            // ::before {
+            //     content: '-';
+            //     align-self: flex-start;
+            // }
+        }
+    }
+}
+.avery {
+    margin: 20px 0;
+    padding: 0 20px;
+    p {
+        color: $darkGrey;
+        font-size: 1.2rem;
+    }
+}

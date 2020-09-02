@@ -4,6 +4,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import style from '../style/layout.module.scss'
 import Nav from '../components/nav.js'
+import Footer from '../components/footer.js'
 
 
 const Layout = ({ children }) => {
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
                 <div className={style.container}>
                     {children}
                 </div>
+                <Footer className={style.footer}/>
             </div>
     )
 } 
