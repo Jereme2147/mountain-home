@@ -9,25 +9,25 @@ const Services = () => {
     return (
       <div className={style.container}>
         <h2>
-          <span>-</span> PROFESSIONAL SERVICES <span>-</span>
+          <span>-</span> PROFESSIONAL SERVICES (option 2)<span>-</span>
         </h2>
         <div className={style.serviceContainer}>
           <div className={style.imgContainer}>
             <TextOverImage
-              pic={variables.greenRoof1}
-              text={variables.text1}
-              alt={variables.text1Alt}
+              pic={variables.greenRoof1.file}
+              text={variables.greenRoof1.text}
+              alt={variables.greenRoof1.textAlt}
             />
             <TextOverImage
-              pic={variables.greenRoof2}
-              text={variables.text2}
-              alt={variables.text1Alt}
+              pic={variables.greenRoof2.file}
+              text={variables.greenRoof2.text}
+              alt={variables.greenRoof2.textAlt}
             />
-            <TextOverImage 
-              pic={variables.greenRoof3}
-              text={variables.text3}
-              alt={variables.text1Alt}
-            /> 
+            <TextOverImage
+              pic={variables.greenRoof3.file}
+              text={variables.greenRoof3.text}
+              alt={variables.greenRoof3.textAlt}
+            />
           </div>
           <div className={style.description}>
             <p className={style.title}>Title One</p>

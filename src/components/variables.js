@@ -3,24 +3,36 @@ const pages = [
 ]
 const Variables = {
   //colors
-    black: "#2d3142ff",
-    lightGrey: "#bfc0c0ff",
-    white: "#ffffffff",
-    orange: "#ef8354ff",
-    darkGrey: "#4f5d75ff",
-    submit: "#0000FF",
+  black: "#2d3142ff",
+  lightGrey: "#bfc0c0ff",
+  white: "#ffffffff",
+  orange: "#ef8354ff",
+  darkGrey: "#4f5d75ff",
+  submit: "#0000FF",
   //LOGOS
-    logo: "logo.png",
-    landingImage: 'roof1.jpg',
-    pages: pages,
+  logo: "logo.png",
+  landingImage: "roof1.jpg",
+  pages: pages,
   // images
-    greenRoof1: 'greenRoof1.JPG',
-    greenRoof2: 'greenRoof2.JPG',
-    greenRoof3: 'greenRoof3.JPG',
+  greenRoof1: {
+    text: "Service One",
+    textAlt: "pic of a roof",
+    file: "greenRoof1.JPG",
+  },
+  greenRoof2: {
+    text: "Service Two",
+    textAlt: "pic of a roof",
+    file: "greenRoof2.JPG",
+  },
+  greenRoof3: {
+    text: "Service Three",
+    textAlt: "pic of a roof",
+    file: "greenRoof3.JPG",
+  },
   //image text
-    text1: 'Service One',
-    text1Alt: 'Pic of a roof',
-    text2: 'Service Two',
-    text3: 'Service Three',
+  text1: "Service One",
+  text1Alt: "Pic of a roof",
+  text2: "Service Two",
+  text3: "Service Three",
 }
 export default Variables

@@ -19,8 +19,8 @@ const Services = () => {
           <div className={style.imgContainer}>
             <Image
               path={{
-                title: variables.greenRoof1,
-                alt: "green roof drone shot",
+                title: variables.greenRoof1.file,
+                alt: variables.greenRoof1.textAlt,
                 style: imageStyle,
                 //   containerStyle: imageContainer,
               }}
