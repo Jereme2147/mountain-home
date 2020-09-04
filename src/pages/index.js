@@ -8,6 +8,8 @@ import BannerText from '../components/bannerText.js'
 import PageContent from '../components/pageContent.js'
 import ContentFrame from '../components/contentFrame.js'
 import Services from '../sections/services.js'
+import ServicesTwo from '../sections/servicesTwo.js'
+
 
 const Index = () => {
   return (
@@ -19,6 +21,9 @@ const Index = () => {
         {/* contentFrame with BBB and insuarnce type stuff */}
         <ContentFrame>
           <Services />
+        </ContentFrame>
+        <ContentFrame>
+          <ServicesTwo />
         </ContentFrame>
       </PageContent>
     </Layout>

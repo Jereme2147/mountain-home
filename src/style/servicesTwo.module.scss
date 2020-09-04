@@ -1,0 +1,81 @@
+@import './reset.scss';
+.container {
+    margin: 30px 0;
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        color: $white;
+        text-shadow: 2px 2px 2px $black;
+        // text-shadow: 2px 2px 1px black, 
+        //             -1px -1px 0 $white;
+         @include desktop() {
+            font-size: 2.5rem;
+            margin: 100px 0;
+    }
+        span {
+            color: $orange;
+        }
+    }
+}
+.serviceContainer {
+    @include desktop() {
+        // flex-direction: row;
+        // margin: 100px 0;
+        // background: $white;
+        // border-bottom: 1px solid $orange;
+        // justify-content: center;
+        justify-content: space-evenly;
+    }
+    display: flex;
+    flex-direction: column;
+    // width: 95%;
+    // margin: 30px 0;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 3px;
+    
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    @include desktop() {
+        width: 45%;
+        padding: 20px;
+        align-items: center;
+        box-shadow: none;
+    }
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: $white;
+    box-shadow: 4px 4px 4px $black;
+}
+.title {
+    width: 100%;
+    font-size: 2rem;
+    color: $black;
+}
+.explain {
+    height: 100%;
+    padding-left: 20px;
+    border-left: solid 5px $orange;
+    font-size:1rem;
+}
+.imgContainer {
+    @include desktop() {
+        // width: 45%;
+        flex-direction: row;
+        justify-content: center;
+        // align-items: center;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px;
+    // box-shadow: 4px 4px 4px $black; 
+}

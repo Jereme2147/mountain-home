@@ -17,5 +17,10 @@ const Variables = {
     greenRoof1: 'greenRoof1.JPG',
     greenRoof2: 'greenRoof2.JPG',
     greenRoof3: 'greenRoof3.JPG',
+  //image text
+    text1: 'Service One',
+    text1Alt: 'Pic of a roof',
+    text2: 'Service Two',
+    text3: 'Service Three',
 }
 export default Variables
