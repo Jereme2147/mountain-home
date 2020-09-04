@@ -5,6 +5,8 @@ import style from './textOverImage.module.scss'
 
 // pass in picture path, text to go over, and alt
 
+//leave these variables like this unless you must change them.  Image size is controled
+// by css
 const imageStyle = {
   width: "100%",
 }
@@ -35,20 +37,3 @@ const TextOverImage = ({ pic, text, alt}) => {
 }
 
 export default TextOverImage
-
-//  <div className={style.container}> 
-//         <Image
-//           path={{
-//             title: pic,
-//             alt: alt,
-//             style: imageStyle,
-//             containerStyle: imageContainer,
-//           }}
-//         />
-//         <div className={style.text}>
-//           <h2>{text}</h2>
-//         </div>
-//         <div className={style.textOverlay}> 
-
-//         </div>
-//       </div>
