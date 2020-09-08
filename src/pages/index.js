@@ -9,6 +9,7 @@ import PageContent from '../components/pageContent.js'
 import ContentFrame from '../components/contentFrame.js'
 import Services from '../sections/services.js'
 import ServicesTwo from '../sections/servicesTwo.js'
+import Contact from '../components/contact/contact.js'
 
 
 const Index = () => {
@@ -20,11 +21,13 @@ const Index = () => {
       <PageContent>
         {/* contentFrame with BBB and insuarnce type stuff */}
         <ContentFrame>
+          {/* all page stuff goes inside contentFrame */}
           <Services />
         </ContentFrame>
         <ContentFrame>
           <ServicesTwo />
         </ContentFrame>
+        <Contact />
       </PageContent>
     </Layout>
   ) 

@@ -14,6 +14,7 @@ const Variables = {
   landingImage: "roof1.jpg",
   pages: pages,
   // images
+  contactRoof: "roof-contact@3x.png",
   greenRoof1: {
     text: "Service One",
     textAlt: "pic of a roof",

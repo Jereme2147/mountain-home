@@ -24,6 +24,9 @@
         @include desktop() {
             font-size: 5rem;
         }
+        @include tiny() {
+            font-size: 2rem;
+        }
     }
     h2 {
         color: $lightGrey;

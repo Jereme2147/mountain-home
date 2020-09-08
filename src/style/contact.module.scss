@@ -1,0 +1,143 @@
+@import './reset.scss';
+
+.container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop() {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.imageContainer {
+    width: 75%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    h2 {
+        color: $white;
+        font-size: 2rem;
+        text-align: center;
+        text-shadow: 2px 2px 2px $black;
+        span {
+            color: $orange;
+        }
+    }
+    @include desktop() {
+        font-size: 2.5rem;
+        width: 50%;
+    }
+}
+.onlyDesktop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.divider {
+    background: $lightGrey;
+    width: 50%;
+    height: 3px;
+    @include desktop() {
+        width: 70%;
+    }
+}
+.mountainInfo {
+    font-size: 1.3rem;
+    @include desktop() {
+        font-size: 1.7rem;
+    }
+    h2 {
+        color: $white;
+        margin-bottom: 15px;
+    }
+    h3{
+        color: $white;
+        margin-bottom: 15px;
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    @include desktop() {
+        width: 40%;
+    }
+}
+// ******** Form below here
+.form {
+    @include desktop() {
+        width: 40%;
+    }
+    width: 90%;
+    input {
+        background: none;
+        border: none;
+        margin-left: 10px;
+        width: 75%;
+        &:focus {
+            border-left: 6px solid $orange;
+            outline: none;
+        }
+        &:hover {
+            border-left: 10px solid $orange;
+        }
+        
+    }
+    textarea {
+        background: none;
+        border: none;
+        margin-left: 10px;
+        width: 100%;
+        &:focus {
+            border-left: 6px solid $orange;
+            outline: none;
+        }
+        &:hover {
+            border-left: 10px solid $orange;
+        }
+    }
+    p {
+        color: $white;
+        // padding: 10px;
+        margin: 10px 0;
+        width: 100%;
+        font-size: 1.5rem;
+        // width: 100%;
+        border-bottom: 1px solid $white;
+    }
+    label {
+        width: 25%;
+        // margin: 0 10px;
+        // border-bottom: 1px solid $white;
+        // width: 100%;
+    }
+    button {
+        background: $lightGrey;
+        margin: 20px;
+        height: 40px;
+        width: 30%;
+        color: $white;
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 1px $darkGrey;
+        border-radius: 5px;
+        border-bottom: 1px solid $orange;
+        border-right: 1px solid $orange;
+        border-top: 1px solid $white;
+        border-left: 1px solid $white;
+        transition: 0.4s;
+        &:hover {
+            background: $submit;
+        }
+    }
+}
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    h2 {
+        color: $white;
+    }
+
+}
