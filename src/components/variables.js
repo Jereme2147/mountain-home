@@ -1,3 +1,4 @@
+// I don't really think this is neccessry for this size site. Leaving, but not using.
 const pages = [
   'Portfolio', 'Services', 'Contact', 'Something'
 ]

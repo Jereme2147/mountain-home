@@ -1,9 +1,11 @@
+require("dotenv").config()
 /**
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 //gatsby develop -H 0.0.0.0 (to view accross network)
+// not sure if this is needed npm run setup -- --spaceId a7n4pp46ut7q --deliveryToken 8r0QbGt8A5NR_NRx-YKijBLAocYvQmY8g0BBOoBxwg8 --managementToken CFPAT-b1fUiOQ4a8eP5FBvIPGU4OiiZ1-q5FIBVxfkSM_m1Kg
 module.exports = {
   siteMetadata: {
     title: `Mountain Home Exteriors`,
@@ -11,6 +13,14 @@ module.exports = {
     author: `Jereme Daniels`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `cruwj48g0w0t`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {

@@ -45,7 +45,16 @@ $footerBorder: 2px solid $orange;
             // border-left: 5px solid $darkGrey;
             // border-right: 5px solid $darkGrey;
             h2 {
-                color: $darkGrey;
+                a {
+                    color: $darkGrey;
+                    text-decoration: none;
+                    border-left: 5px solid transparent;
+                    transition: 0.4s;
+                    &:hover {
+                        border-left: 5px solid $orange;
+                    }
+                }
+             
             }
             // ::before {
             //     content: '-';

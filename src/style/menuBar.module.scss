@@ -7,13 +7,11 @@
         display: flex;
     // *** ANY ADJUSTMENT HERE MEANS ADJUSTMENT TO pageContent and bannerText
         width: 20%;
-        // background: $gradientMenu; 
         height: 100vh;
         justify-content: center;
-        // align-items: center;
         margin-top: 200px;
         ul {
-            list-style: none;
+            list-style: none; 
             font-size: 2rem;
             display: flex;
             flex-direction: column;
@@ -28,11 +26,19 @@
                     border-left: 13px solid $orange;
                     padding-left: 0;
                 }
+                h2 {
+                    a {
+                        color: $white;
+                        text-shadow: 2px 2px 2px $black;
+                        text-decoration: none;
+                    }
+                    
+                }
             }
-            h2 {
-                text-shadow: 2px 2px 2px $black;
-                color: $white;
-            }
+            // h2 {
+            //     text-shadow: 2px 2px 2px $black;
+            //     color: $white;
+            // } 
         }
     }
     display: none;

@@ -21,6 +21,7 @@
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.28",
+    "gatsby-source-contentful": "^2.3.45",
     "gatsby-source-filesystem": "^2.3.25",
     "gatsby-transformer-remark": "^2.8.29",
     "gatsby-transformer-sharp": "^2.5.13",
