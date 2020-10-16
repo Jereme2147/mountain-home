@@ -1,6 +1,5 @@
 // imports pages from variables. 
 // style is done in css for file calling this
-//Needs "link"
 import React from 'react'
 // import variables from '../components/variables'
 import { Link } from "gatsby"
@@ -10,7 +9,7 @@ const menuItems = () => {
       <ul>
         <li>
           <h2>
-            <Link to="/Portfolio">Portfolio</Link>
+            <Link to="/portfolio">Portfolio</Link>
           </h2>
         </li>
         <li>

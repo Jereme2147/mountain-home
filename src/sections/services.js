@@ -2,6 +2,10 @@ import React from 'react'
 import style from '../style/services.module.scss'
 import Image from '../components/image.js'
 import variables from '../components/variables.js'
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from 'gatsby-image'
 
 const imageStyle = {
   width: "100%",
@@ -11,34 +15,75 @@ const imageContainer = {
   display: "flex",
   justifyContent: "center",
 }
+//can now be sorted by order
 const Services = () => {
+    const data = useStaticQuery(graphql`
+      query {
+        allContentfulSection1Service(sort: { fields: order }) {
+          edges {
+            node {
+              id
+              title
+              featuredImage {
+                fluid(maxWidth: 1000, quality: 90) {
+                  ...GatsbyContentfulFluid_withWebp
+                }
+              }
+              childContentfulSection1ServiceSection1ItemContentRichTextNode {
+                json
+              }
+            }
+          }
+        }
+      }
+    `)
     return (
       <div className={style.container}>
-        <h2><span>-</span> PROFESSIONAL SERVICES <span>-</span></h2>
-        <div className={style.serviceContainer}>
-          <div className={style.imgContainer}>
-            <Image
-              path={{
-                title: variables.greenRoof1.file,
-                alt: variables.greenRoof1.textAlt,
-                style: imageStyle,
-                //   containerStyle: imageContainer,
-              }}
-            />
-          </div>
-          <div className={style.description}>
-            <p className={style.title}>Title One</p>
-            <p className={style.explain}>
-              Descrittion of service goes here. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Lacus vel facilisis volutpat est
-              velit. Sapien eget mi proin sed libero enim. Ac feugiat sed lectus
-              vestibulum mattis ullamcorper. Lorem ipsum dolor sit amet
-              consectetur adipiscing elit. Urna condimentum mattis pellentesque
-              id nibh tortor id. Nunc mattis enim ut tellus elementum sagittis
-              vitae et. Dolor purus non enim praesent elementum.{" "}
-            </p>
-          </div>
+        <h2>
+          <span>-</span> Professional Roofers <span>-</span>
+        </h2>
+        {console.log(data)}
+        {data.allContentfulSection1Service.edges.map(item => {
+          return (
+            <div className={style.serviceContainer}>
+              <div className={style.imgContainer}>
+                <Img
+                  key={item.node.id}
+                  fluid={item.node.featuredImage[0].fluid}
+                  alt="test"
+                  style={imageStyle}
+                />
+              </div>
+              {console.log(item)}
+              <div className={style.description}>
+                <p className={style.title}>{item.node.title}</p>
+                <p className={style.explain}>
+                  {documentToReactComponents(
+                    item.node
+                      .childContentfulSection1ServiceSection1ItemContentRichTextNode
+                      .json
+                  )}
+                </p>
+              </div>
+            </div>
+          )
+          //
+        })}
+        <div className={style.tags}>
+          <h2>Choose a gallery</h2>
+          {/* These should be dynamically loaded after all info is in contentful */}
+          <a href="#">
+            <h3>#cedar-shake</h3>
+          </a>
+          <a href="#">
+            <h3>#metal-roof</h3>
+          </a>
+          <a href="#">
+            <h3>#repairs</h3>
+          </a>
+          <a href="#">
+            <h3>#shingles</h3>
+          </a>
         </div>
       </div>
     )

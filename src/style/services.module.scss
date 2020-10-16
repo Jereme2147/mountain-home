@@ -73,3 +73,22 @@
     margin: 20px;
     box-shadow: 4px 4px 4px $black; 
 }
+.tags {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2 {
+        width: 100%;
+    }
+    a {
+        text-decoration: none;
+        margin: 0 10px;
+        h3 {
+            color: $white;
+            font-size: 1.5rem;
+        }
+    }
+
+}

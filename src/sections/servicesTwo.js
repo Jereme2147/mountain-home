@@ -9,7 +9,7 @@ const Services = () => {
     return (
       <div className={style.container}>
         <h2>
-          <span>-</span> PROFESSIONAL SERVICES (option 2)<span>-</span>
+          <span>-</span> Other Professional Services <span>-</span>
         </h2>
         <div className={style.serviceContainer}>
           <div className={style.imgContainer}>

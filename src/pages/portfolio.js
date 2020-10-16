@@ -12,12 +12,12 @@ import ContentFrame from "../components/contentFrame.js"
 
 const Portfolio = () => {
     return (
-    //   <Layout>
-    //     <MenuBar />
+      <Layout>
+          <h1>HELLO</h1>
+    {/* //     <MenuBar />
     //     <BannerImage banner={variables.landingImage} />
-    //     <h2>PORTFOLIO</h2>
-    //   </Layout>
-    <div>FUCK</div>
+    //     <h2>PORTFOLIO</h2> */}
+      </Layout>
     )
 }
 
