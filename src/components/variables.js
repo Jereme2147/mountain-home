@@ -16,25 +16,7 @@ const Variables = {
   pages: pages,
   // images
   contactRoof: "roof-contact@3x.png",
-  greenRoof1: {
-    text: "Service One",
-    textAlt: "pic of a roof",
-    file: "greenRoof1.JPG",
-  },
-  greenRoof2: {
-    text: "Service Two",
-    textAlt: "pic of a roof",
-    file: "greenRoof2.JPG",
-  },
-  greenRoof3: {
-    text: "Service Three",
-    textAlt: "pic of a roof",
-    file: "greenRoof3.JPG",
-  },
+
   //image text
-  text1: "Service One",
-  text1Alt: "Pic of a roof",
-  text2: "Service Two",
-  text3: "Service Three",
 }
 export default Variables

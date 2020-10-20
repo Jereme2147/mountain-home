@@ -3,9 +3,31 @@ import React from 'react'
 import style from '../style/servicesTwo.module.scss'
 import variables from '../components/variables.js'
 import TextOverImage from "../components/textOverImage/textOverImage.js"
+import { graphql, useStaticQuery } from "gatsby"
 
 
 const Services = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulNotRoofingSection {
+        edges {
+          node {
+            id
+            serviceTitle
+            serviceImage {
+              fluid(maxWidth: 600, quality: 50) {
+                ...GatsbyContentfulFluid_withWebp
+              }
+              title
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
     return (
       <div className={style.container}>
         <h2>
@@ -13,21 +35,16 @@ const Services = () => {
         </h2>
         <div className={style.serviceContainer}>
           <div className={style.imgContainer}>
-            <TextOverImage
-              pic={variables.greenRoof1.file}
-              text={variables.greenRoof1.text}
-              alt={variables.greenRoof1.textAlt}
-            />
-            <TextOverImage
-              pic={variables.greenRoof2.file}
-              text={variables.greenRoof2.text}
-              alt={variables.greenRoof2.textAlt}
-            />
-            <TextOverImage
-              pic={variables.greenRoof3.file}
-              text={variables.greenRoof3.text}
-              alt={variables.greenRoof3.textAlt}
-            />
+            {data.allContentfulNotRoofingSection.edges.map(item => {
+              return (
+                <TextOverImage 
+                 pic= {item.node.serviceImage.fluid}
+                 alt= {item.node.serviceImage.title}
+                 text= {item.node.serviceTitle}
+                 url= {item.node.serviceImage.file.url}
+                />
+              )
+            })}
           </div>
           <div className={style.description}>
             <p className={style.title}>Title One</p>

@@ -1,19 +1,15 @@
+//To add services to the
+//roofing section, add to contentful section 1 service. 
 import React from 'react'
 import style from '../style/services.module.scss'
-import Image from '../components/image.js'
-import variables from '../components/variables.js'
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+// import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from 'gatsby-image'
+import { Link } from "gatsby"
 
 const imageStyle = {
   width: "100%",
-}
-const imageContainer = {
-  width: "100%",
-  display: "flex",
-  justifyContent: "center",
 }
 //can now be sorted by order
 const Services = () => {
@@ -27,6 +23,10 @@ const Services = () => {
               featuredImage {
                 fluid(maxWidth: 1000, quality: 90) {
                   ...GatsbyContentfulFluid_withWebp
+                }
+                description
+                file {
+                  url
                 }
               }
               childContentfulSection1ServiceSection1ItemContentRichTextNode {
@@ -42,17 +42,18 @@ const Services = () => {
         <h2>
           <span>-</span> Professional Roofers <span>-</span>
         </h2>
-        {console.log(data)}
         {data.allContentfulSection1Service.edges.map(item => {
           return (
             <div className={style.serviceContainer}>
               <div className={style.imgContainer}>
-                <Img
-                  key={item.node.id}
-                  fluid={item.node.featuredImage[0].fluid}
-                  alt="test"
-                  style={imageStyle}
-                />
+                <a href={item.node.featuredImage[0].file.url} target="__BLANK">
+                  <Img
+                    key={item.node.id}
+                    fluid={item.node.featuredImage[0].fluid}
+                    alt={item.node.featuredImage[0].description}
+                    style={imageStyle}
+                  />
+                </a>
               </div>
               {console.log(item)}
               <div className={style.description}>
@@ -72,6 +73,9 @@ const Services = () => {
         <div className={style.tags}>
           <h2>Choose a gallery</h2>
           {/* These should be dynamically loaded after all info is in contentful */}
+          <Link to="/gallery/" state={{ tag: 'dicks'}}>
+            #dicks
+          </Link>
           <a href="#">
             <h3>#cedar-shake</h3>
           </a>
