@@ -74,7 +74,7 @@ const Services = () => {
           <h2>Choose a gallery</h2>
           {/* These should be dynamically loaded after all info is in contentful */}
           <Link to="/gallery/" state={{ tag: 'dicks'}}>
-            #dicks
+            #test
           </Link>
           <a href="#">
             <h3>#cedar-shake</h3>
