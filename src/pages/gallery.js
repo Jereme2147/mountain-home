@@ -1,5 +1,6 @@
+// takes a passed in tag that it in turn passes to gallery guts.
+// the idea is reproducing a paged based on image tags
 import React from "react"
-import Image from "../components/image.js"
 import Layout from "../components/layout.js"
 import variables from "../components/variables.js"
 import BannerImage from "../components/bannerImage.js"
@@ -10,7 +11,8 @@ import Contact from "../components/contact/contact.js"
 import PageContent from '../components/pageContent.js'
 import GalleryGuts from '../gallery/gallery-guts.js'
 
-const Gallery = ( tag ) => {
+const Gallery = ( {location} ) => {
+  const { state = {} } = location
   return (
     <Layout>
       <MenuBar />
@@ -18,8 +20,7 @@ const Gallery = ( tag ) => {
       <BannerText />
       <PageContent>
         <ContentFrame>
-          <GalleryGuts tag={ tag } />
-          
+          <GalleryGuts tag={ state.tag } />
         </ContentFrame>
         <Contact />
       </PageContent>

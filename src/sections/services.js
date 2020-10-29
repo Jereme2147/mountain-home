@@ -1,5 +1,6 @@
 //To add services to the
 //roofing section, add to contentful section 1 service. 
+//to add tags, add a gallery in contentful.
 import React from 'react'
 import style from '../style/services.module.scss'
 // import { BLOCKS, MARKS } from "@contentful/rich-text-types"
@@ -73,8 +74,11 @@ const Services = () => {
         <div className={style.tags}>
           <h2>Choose a gallery</h2>
           {/* These should be dynamically loaded after all info is in contentful */}
-          <Link to="/gallery/" state={{ tag: 'dicks'}}>
-            #test
+          <Link to="/gallery/" state={{ tag: "cedar-shake" }}>
+            #cedar-shake
+          </Link>
+          <Link to="/gallery/" state={{ tag: "metal" }}>
+            #metal
           </Link>
           <a href="#">
             <h3>#cedar-shake</h3>
