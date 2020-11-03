@@ -18,7 +18,7 @@ const MobileMenu = () => {
       <div className={style.container}>
         <div className={style.imageContainer}>
           <Image
-            path={{
+            path={{ 
               title: variables.logo,
               alt: "Mountain Home Logo",
               style: imageStyle,

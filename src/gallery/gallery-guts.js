@@ -21,6 +21,12 @@ const GalleryGuts = ({ tag }) => {
               ...GatsbyContentfulFluid_withWebp
             }
             file {
+              details {
+                image {
+                  height
+                  width
+                }
+              }
               url
             }
             id
@@ -29,53 +35,37 @@ const GalleryGuts = ({ tag }) => {
       }
     }
   `)
-  const style = {
-    width: "100px",
-    height: "100px",
-  }
+  
   return (
-    <div>
+    <div className={style.container}>
+      {/* {console.log(height, width)} */}
       <h2>{tag}</h2>
       {data.allContentfulGallery.nodes.map(item => {
+
         const str = String(item.tags) // object to string
         if (str.includes(tag)) {
-          console.log("here 1")
           return (
-            <div>
+            <div className={style.picContainer}>
               {item.picture.map(thing => {
+                // these lines basically take care of images taht are portrait
+                  const height = thing.file.details.image.height;
+                  const width = thing.file.details.image.width;
+                  const ratio = width / height;
                 return (
-                  <div style={style}>
-                    <h1>{item.tags}</h1>
-                    <a href="#" target="__BLANK">
+                  <div className={ratio >= 1 ? style.imageBox : style.imageBox2}>
+                    <a href={thing.file.url} target="__BLANK">
                       <Img
                         key={thing.id}
                         fluid={thing.fluid}
-                        alt="test"
-                        style={style}
+                        alt="roof pictures"
+                        className={style.img}
                       />
                     </a>
                   </div>
                 )
-                
-              })} 
+              })}
             </div>
           )
-         
-        
-          // return (
-          //   <div style={style}>
-          //     <h1>{item.tags}</h1>
-          //     {/* <a href={item.picture.file.url} target="__BLANK"> */}
-          //     <a href="#" target="__BLANK">
-          //       <Img
-          //         key={item.picture.id}
-          //         fluid={item.picture.fluid}
-          //         alt="test"
-          //         style={style}
-          //       />
-          //     </a>
-          //   </div>
-          // )
         }
       })}
     </div>

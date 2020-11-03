@@ -36,11 +36,16 @@ const Services = () => {
             }
           }
         }
+        allContentfulGallery {
+          nodes {
+            tags
+          }
+        }
       }
     `)
     return (
       <div className={style.container}>
-        <h2>
+        <h2 id="services">
           <span>-</span> Professional Roofers <span>-</span>
         </h2>
         {data.allContentfulSection1Service.edges.map(item => {
@@ -72,15 +77,21 @@ const Services = () => {
           //
         })}
         <div className={style.tags}>
-          <h2>Choose a gallery</h2>
-          {/* These should be dynamically loaded after all info is in contentful */}
-          <Link to="/gallery/" state={{ tag: "cedar-shake" }}>
-            #cedar-shake
-          </Link>
-          <Link to="/gallery/" state={{ tag: "metal" }}>
-            #metal
-          </Link>
-          <a href="#">
+          {/* These are dynamicly loaded.  To add galleries, add to contentful */}
+          <h2 id="galleries">Galleries</h2>
+          {data.allContentfulGallery.nodes.map(thing => {
+            return (
+              <Link
+               to="/gallery/"
+               state={{tag: thing.tags}}
+              >
+                <h3>{thing.tags}</h3>
+              </Link>
+
+            )
+          })}
+          
+          {/* <a href="#">
             <h3>#cedar-shake</h3>
           </a>
           <a href="#">
@@ -91,7 +102,7 @@ const Services = () => {
           </a>
           <a href="#">
             <h3>#shingles</h3>
-          </a>
+          </a> */}
         </div>
       </div>
     )

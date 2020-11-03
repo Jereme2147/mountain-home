@@ -29,7 +29,7 @@ const Services = () => {
     }
   `)
     return (
-      <div className={style.container}>
+      <div className={style.container} id="otherServices">
         <h2>
           <span>-</span> Other Professional Services <span>-</span>
         </h2>

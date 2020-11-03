@@ -19,7 +19,11 @@
         list-style: none;
         li {
             padding: 30px;
-            text-shadow: 1px 1px 1px $orange;
+            text-shadow: -1px -1px 1px $orange, 3px 3px 3px $black;
+            a {
+                color: $white;
+                text-decoration: none;
+            }
         }
     }
 

@@ -1,1 +1,43 @@
 @import '../style/reset.scss';
+@mixin images {
+    //for images so I don't have two classes to change.
+    //see imagebox and imagebox2
+    margin: 10px;
+    
+}
+.img {
+    box-shadow: 10px 10px 5px $black;
+}
+.container {
+    width: 100%;
+    h2{
+        font-size: 3rem;
+        color: $orange;
+        text-align: center;
+        margin: 15px;
+        text-shadow: -1px -1px 1px $white, 2px 2px 2px $black;
+    }
+}
+.picContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+//for landscape images
+.imageBox {
+    @include desktop() {
+        width: 30%;
+    }
+    width: 40%;
+    @include images();
+}
+// for portrait images
+.imageBox2 {
+    @include desktop() {
+        width: 20%;
+    }
+    width: 30%;
+    @include images();
+}

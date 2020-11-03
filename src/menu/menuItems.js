@@ -9,23 +9,28 @@ const menuItems = () => {
       <ul>
         <li>
           <h2>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/">Home</Link>
           </h2>
         </li>
         <li>
           <h2>
-            <a href="#services">Services</a>
+            <a href="#services">Roofing</a>
           </h2>
         </li>
         <li>
           <h2>
-            <a href="#contactUs">Contact</a>
-          </h2>
-        </li>
-        <li>
-          <h2>
-            <a href="#contactUs">Something</a>
+            <a href="#otherServices">Services</a>
             {/* maybe some credentials? */}
+          </h2>
+        </li>
+        <li>
+          <h2>
+            <a href="#galleries">Galleries</a>
+          </h2>
+        </li>
+        <li>
+          <h2>
+            <a href="#contactUs">Contact Us</a>
           </h2>
         </li>
       </ul>
