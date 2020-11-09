@@ -19,6 +19,7 @@ const Services = () => {
                 ...GatsbyContentfulFluid_withWebp
               }
               title
+              id
               file {
                 url
               }
@@ -37,11 +38,12 @@ const Services = () => {
           <div className={style.imgContainer}>
             {data.allContentfulNotRoofingSection.edges.map(item => {
               return (
-                <TextOverImage 
-                 pic= {item.node.serviceImage.fluid}
-                 alt= {item.node.serviceImage.title}
-                 text= {item.node.serviceTitle}
-                 url= {item.node.serviceImage.file.url}
+                <TextOverImage
+                  pic={item.node.serviceImage.fluid}
+                  alt={item.node.serviceImage.title}
+                  text={item.node.serviceTitle}
+                  url={item.node.serviceImage.file.url}
+                  key={item.node.serviceImage.id}
                 />
               )
             })}

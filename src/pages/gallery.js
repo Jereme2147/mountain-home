@@ -17,7 +17,7 @@ const Gallery = ( {location} ) => {
     <Layout>
       <MenuBar />
       <BannerImage banner={variables.landingImage} />
-      <BannerText />
+      <BannerText text="Gallery"/>
       <PageContent>
         <ContentFrame>
           <GalleryGuts tag={ state.tag } />

@@ -25,6 +25,7 @@ const Services = () => {
                   ...GatsbyContentfulFluid_withWebp
                 }
                 description
+                id
                 file {
                   url
                 }
@@ -38,6 +39,7 @@ const Services = () => {
         allContentfulGallery {
           nodes {
             tags
+            id
           }
         }
       }
@@ -49,27 +51,27 @@ const Services = () => {
         </h2>
         {data.allContentfulSection1Service.edges.map(item => {
           return (
-            <div className={style.serviceContainer}>
+            <div className={style.serviceContainer} key={item.node.id}>
               <div className={style.imgContainer}>
                 <a href={item.node.featuredImage[0].file.url} target="__BLANK">
                   <Img
-                    key={item.node.id}
+                    key={item.node.featuredImage[0].id}
                     fluid={item.node.featuredImage[0].fluid}
                     alt={item.node.featuredImage[0].description}
                     style={imageStyle}
                   />
                 </a>
               </div>
-              {console.log(item)}
               <div className={style.description}>
                 <p className={style.title}>{item.node.title}</p>
-                <p className={style.explain}>
+                <div className={style.explain}> 
+                {/* changed this from P to Div */}
                   {documentToReactComponents(
                     item.node
                       .childContentfulSection1ServiceSection1ItemContentRichTextNode
                       .json
                   )}
-                </p>
+                </div>
               </div>
             </div>
           )
@@ -83,6 +85,7 @@ const Services = () => {
               <Link
                to="/gallery/"
                state={{tag: thing.tags}}
+               key={thing.id}
               >
                 <h3>{thing.tags}</h3>
               </Link>
