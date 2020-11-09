@@ -3,7 +3,7 @@
 .container {
     margin: 30px 0;
     h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: center;
         color: $white;
         text-shadow: 2px 2px 2px $black;
@@ -79,17 +79,31 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 20px;
+    border-bottom: 2px solid $orange;
+    padding-bottom: 10px;
     h2 {
         width: 100%;
+        // border-bottom: 3px solid $orange;
+        border-top: 2px solid $orange;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 20px 0;
     }
     a {
         text-decoration: none;
         margin: 0 10px;
         h3 {
             color: $white;
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-shadow: 3px 3px 3px $black;
+            @include desktop() {
+                font-size: 2rem;
+            }
         }
     }
 
 }
+// #galleries {
+//     border-bottom: 2px solid $orange;
+// }

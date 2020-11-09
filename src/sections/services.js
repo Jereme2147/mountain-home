@@ -3,7 +3,6 @@
 //to add tags, add a gallery in contentful.
 import React from 'react'
 import style from '../style/services.module.scss'
-// import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from 'gatsby-image'
@@ -90,19 +89,6 @@ const Services = () => {
 
             )
           })}
-          
-          {/* <a href="#">
-            <h3>#cedar-shake</h3>
-          </a>
-          <a href="#">
-            <h3>#metal-roof</h3>
-          </a>
-          <a href="#">
-            <h3>#repairs</h3>
-          </a>
-          <a href="#">
-            <h3>#shingles</h3>
-          </a> */}
         </div>
       </div>
     )
