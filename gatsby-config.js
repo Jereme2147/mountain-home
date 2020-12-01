@@ -51,19 +51,20 @@ module.exports = {
           {
             family: "Montserrat",
             variable: true,
-            // weights: ["200..900"],
+            weights: ["200..900"],
           },
           {
             family: "Hind Madurai",
             variable: true,
-            // weights: ["200..900"],
+            weights: ["200..900"],
           },
           {
             family: "Roboto",
             variable: true,
-            // weights: ["200..900"],
+            weights: ["200..900"],
           },
         ],
+        display: 'swap'
       },
     },
     // {
