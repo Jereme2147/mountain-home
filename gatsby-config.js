@@ -40,19 +40,31 @@ module.exports = {
         start_url: `/`,
         // background_color: `#679436'`,
         // theme_color: `#663399`,
-        display: `standalone`, 
+        display: `standalone`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
-          `limelight`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          {
+            family: "Montserrat",
+            variable: true,
+            // weights: ["200..900"],
+          },
+          {
+            family: "Hind Madurai",
+            variable: true,
+            // weights: ["200..900"],
+          },
+          {
+            family: "Roboto",
+            variable: true,
+            // weights: ["200..900"],
+          },
         ],
-        display: 'swap'
-      }
+      },
     },
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
