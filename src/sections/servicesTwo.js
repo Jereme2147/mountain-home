@@ -51,14 +51,13 @@ const Services = () => {
           <div className={style.description}>
             <p className={style.title}>Title One</p>
             <p className={style.explain}>
-              Descrittion of service goes here. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Lacus vel facilisis volutpat est
-              velit. Sapien eget mi proin sed libero enim. Ac feugiat sed lectus
-              vestibulum mattis ullamcorper. Lorem ipsum dolor sit amet
-              consectetur adipiscing elit. Urna condimentum mattis pellentesque
-              id nibh tortor id. Nunc mattis enim ut tellus elementum sagittis
-              vitae et. Dolor purus non enim praesent elementum.{" "}
+              With anything home improvement, it is the constant case that one
+              component of the home will tie into another component. Therefore
+              it pays to be versatile. Mountain Home Exteriors maintains a well
+              rounded knowledge in many areas and offers services in siding,
+              decking and handrails, interior work, carpentry, and much more. So
+              if there is a lingering project around the house, feel free to
+              ask!{" "}
             </p>
           </div>
         </div>

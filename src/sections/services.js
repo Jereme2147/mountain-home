@@ -47,7 +47,7 @@ const Services = () => {
     return (
       <div className={style.container}>
         <h2 id="services">
-          <span>-</span> Professional Roofers <span>-</span>
+          <span>-</span> Professional Roofing Services <span>-</span>
         </h2>
         {data.allContentfulSection1Service.edges.map(item => {
           return (

@@ -47,7 +47,7 @@ const GalleryGuts = ({ tag }) => {
           return (
             <div className={style.picContainer}>
               {item.picture.map(thing => {
-                // these lines basically take care of images taht are portrait
+                // these lines basically take care of images that are portrait
                   const height = thing.file.details.image.height;
                   const width = thing.file.details.image.width;
                   const ratio = width / height;
