@@ -6,7 +6,7 @@ import style from '../style/services.module.scss'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from 'gatsby-image'
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import TextOverImage from "../components/textOverImage/textOverImage.js"
 
 const imageStyle = {
@@ -41,14 +41,6 @@ const Services = () => {
           nodes {
             tags
             id
-            galleryImage {
-              fluid(maxWidth: 1000, quality: 90) {
-                ...GatsbyContentfulFluid_withWebp
-              }
-              file {
-                url
-              }
-            }
           }
         }
       }
@@ -92,14 +84,14 @@ const Services = () => {
           <h2 id="galleries">Galleries</h2>
           {data.allContentfulGallery.nodes.map(thing => {
             return (
-              <TextOverImage
-                pic={thing.galleryImage.fluid}
-                alt={`${thing.tags} picture`}
-                text={thing.tags}
-                url={`/gallery/`}
-                tag={{tag: thing.tags}}
-                key={thing.id}
-              />
+              <Link
+               to="/gallery/"
+               state={{tag: thing.tags}}
+               key={thing.id}
+              >
+                <h3>{thing.tags}</h3>
+              </Link>
+
             )
           })}
         </div>

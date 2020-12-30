@@ -19,7 +19,6 @@ const Index = () => {
       <BannerImage banner={variables.landingImage} />
       <BannerText />
       <PageContent>
-        {/* contentFrame with BBB and insuarnce type stuff */}
         <ContentFrame>
           {/* all page stuff goes inside contentFrame */}
           <Services />

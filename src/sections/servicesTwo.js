@@ -35,7 +35,7 @@ const Services = () => {
           <span>-</span> Other Professional Services <span>-</span>
         </h2>
         <div className={style.serviceContainer}>
-          <div className={style.imgContainer}>
+          {/* <div className={style.imgContainer}>
             {data.allContentfulNotRoofingSection.edges.map(item => {
               return (
                 <TextOverImage
@@ -47,7 +47,7 @@ const Services = () => {
                 />
               )
             })}
-          </div>
+          </div> */}
           <div className={style.description}>
             <p className={style.title}>Title One</p>
             <p className={style.explain}>
