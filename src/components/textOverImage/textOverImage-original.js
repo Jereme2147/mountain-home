@@ -18,14 +18,17 @@ const imageContainer = {
   display: "flex",
   justifyContent: "center",
 }
-const TextOverImage = ({ pic, text, alt}) => {
+const TextOverImage = ({ pic, text, alt, url}) => {
     return (
       // image size is set in css .container
       <div className={style.container}>
-        <span>
-          <p>{text}</p> 
-        </span>
-        <a href="#" className={style.img}>
+        <a href="#">
+          <span>
+            <p>{text}</p>{" "}
+          </span>
+        </a>
+
+        <a href={url} className={style.img}>
           <Image
             path={{
               title: pic,

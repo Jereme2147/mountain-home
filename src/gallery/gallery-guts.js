@@ -13,6 +13,7 @@ const GalleryGuts = ({ tag }) => {
     query {
       allContentfulGallery {
         nodes {
+          title
           id
           tags
           picture {
@@ -30,6 +31,7 @@ const GalleryGuts = ({ tag }) => {
               url
             }
             id
+            description
           }
         }
       }
@@ -39,31 +41,37 @@ const GalleryGuts = ({ tag }) => {
   return (
     <div className={style.container}>
       {/* {console.log(height, width)} */}
-      <h2>{tag}</h2>
+      {/* <h2>{tag}</h2> */}
+      {console.log(data.allContentfulGallery.nodes)}
       {data.allContentfulGallery.nodes.map(item => {
-
         const str = String(item.tags) // object to string
         if (str.includes(tag)) {
           return (
-            <div className={style.picContainer}>
-              {item.picture.map(thing => {
-                // these lines basically take care of images that are portrait
-                  const height = thing.file.details.image.height;
-                  const width = thing.file.details.image.width;
-                  const ratio = width / height;
-                return (
-                  <div className={ratio >= 1 ? style.imageBox : style.imageBox2}>
-                    <a href={thing.file.url} target="__BLANK">
-                      <Img
-                        key={thing.id}
-                        fluid={thing.fluid}
-                        alt="roof pictures"
-                        className={style.img}
-                      />
-                    </a>
-                  </div>
-                )
-              })}
+            <div>
+              <h2>{item.title}</h2>
+              <div className={style.picContainer}>
+                {item.picture.map(thing => {
+                  // these lines basically take care of images that are portrait
+                  const height = thing.file.details.image.height
+                  const width = thing.file.details.image.width
+                  const ratio = width / height
+                  return (
+                    <div
+                      className={ratio >= 1 ? style.imageBox : style.imageBox2}
+                    >
+                      <h3 className={style.picTitle}>{thing.description ? thing.description : ''}</h3> 
+                      <a href={thing.file.url} target="__BLANK">
+                        <Img
+                          key={thing.id}
+                          fluid={thing.fluid}
+                          alt="roof pictures"
+                          className={style.img}
+                        />
+                      </a>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           )
         }

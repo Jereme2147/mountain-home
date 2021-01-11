@@ -30,12 +30,20 @@
         &:hover {
             border: 3px solid $orange;
         }
+        // a {
+        //     z-index: 4;
+        //     opacity: 0;
+        //     position: absolute;
+        //     // width: 100%;
+        //     // height: 100%;
+        // }
        span {
             z-index: 3;
             opacity: 1;
             position: absolute;
             transition: .04s;
-            height: 150px; //will need to be adjusted by app
+            // height: 150px; //will need to be adjusted by app
+            margin-top: 20px;
             display: flex;
             align-items: center;
             // &:hover  {

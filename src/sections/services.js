@@ -39,6 +39,7 @@ const Services = () => {
         }
         allContentfulGallery {
           nodes {
+            title
             tags
             id
             galleryImage {
@@ -92,14 +93,14 @@ const Services = () => {
           <h2 id="galleries">Galleries</h2>
           {data.allContentfulGallery.nodes.map(thing => {
             return (
-              <TextOverImage
-                pic={thing.galleryImage.fluid}
-                alt={`${thing.tags} picture`}
-                text={thing.tags}
-                url={`/gallery/`}
-                tag={{tag: thing.tags}}
-                key={thing.id}
-              />
+                <TextOverImage
+                  pic={thing.galleryImage.fluid}
+                  alt={`${thing.tags} picture`}
+                  text={thing.title}
+                  url={`/gallery/`}
+                  tag={{ tag: thing.tags }}
+                  key={thing.id}
+                />
             )
           })}
         </div>

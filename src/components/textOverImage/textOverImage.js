@@ -22,9 +22,11 @@ const TextOverImage = ({ pic, text, alt, url, tag}) => {
       // image size is set in css .container
       <div className={style.container}>
         <span>
-          <p>{text}</p>
+          {/* <a> */}
+            <p>{text}</p>
+          {/* </a> */}
         </span>
-        <Link to={`/gallery/`} state={tag}className={style.img}>
+        <Link to={`/gallery/`} state={tag} className={style.img}>
           <Img key={pic} fluid={pic} alt={alt} style={imageContainer} />
         </Link>
       </div>
