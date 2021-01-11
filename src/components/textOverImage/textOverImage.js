@@ -29,7 +29,7 @@ const TextOverImage = ({ pic, text, alt, url, tag}) => {
         <Link to={`/gallery/`} state={tag} className={style.img}>
           <Img key={pic} fluid={pic} alt={alt} style={imageContainer} />
         </Link>
-      </div>
+      </div> 
     )
 }
 export default TextOverImage
