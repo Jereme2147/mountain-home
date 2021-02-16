@@ -20,7 +20,7 @@ const Gallery = ( {location} ) => {
       <BannerText text="Gallery"/>
       <PageContent>
         <ContentFrame>
-          <GalleryGuts tag={ state.tag } />
+          <GalleryGuts tag={ state.tag } id={ state.tag }/>
         </ContentFrame>
         <Contact />
       </PageContent>
