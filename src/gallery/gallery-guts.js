@@ -68,7 +68,7 @@ const GalleryGuts = ({ tag }) => {
           }
           return (
             <div key={item.id}>  
-              <h2>{item.title}</h2>
+              <h2>{item.title}</h2> 
               <div className={style.picContainer}>
                 { // mapping through the sorted images
                   sorted.map(thing => {
