@@ -42,6 +42,7 @@ const Services = () => {
             title
             tags
             id
+            slug
             galleryImage {
               fluid(maxWidth: 1000, quality: 90) {
                 ...GatsbyContentfulFluid_withWebp
@@ -92,13 +93,14 @@ const Services = () => {
           {/* These are dynamicly loaded.  To add galleries, add to contentful */}
           <h2 id="galleries">Galleries</h2>
           {data.allContentfulGallery.nodes.map(thing => {
+            {console.log("thing  ", thing)}
             return (
                 <TextOverImage
                   pic={thing.galleryImage.fluid}
                   alt={`${thing.tags} picture`}
                   text={thing.title}
-                  url={`/gallery/`}
-                  tag={{ tag: thing.tags }}
+                  url={`/galleries/${thing.slug}`}
+                  tag={{ tag: thing.slug }}
                   key={thing.id}
                 />
             )

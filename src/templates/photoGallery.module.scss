@@ -10,7 +10,12 @@
 }
 .container {
     width: 100%;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     h2{
+        width: 100%;
         font-size: 3rem;
         color: $orange;
         text-align: center;

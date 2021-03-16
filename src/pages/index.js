@@ -25,7 +25,7 @@ const Index = () => {
         </ContentFrame>
         <ContentFrame>
           <ServicesTwo />
-        </ContentFrame>
+        </ContentFrame> 
         <Contact />
       </PageContent>
     </Layout>
