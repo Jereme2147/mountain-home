@@ -9,7 +9,7 @@ import Contact from "../components/contact/contact.js"
 import PageContent from "../components/pageContent.js"
 import style from "./photoGallery.module.scss"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql} from "gatsby"
 
 export const query = graphql`
   query($slug: String!) {
@@ -57,7 +57,7 @@ const PhotoGallery = props => {
     for (let j = 0; j < props.data.contentfulGallery.picture.length; j++) {
       //comparing the sorted to caps data to the original so I can push the 
       //whole object into the new "sorted" array
-      if(pic2[i] == props.data.contentfulGallery.picture[j].title.toUpperCase()){
+      if(pic2[i] === props.data.contentfulGallery.picture[j].title.toUpperCase()){
         sorted.push(props.data.contentfulGallery.picture[j]);
       }
     }

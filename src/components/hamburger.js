@@ -45,14 +45,14 @@ class Hamburger extends React.Component {
             <span className={hamburgerStyles.hamburgerInner}></span>
           </span>
         </button>
-        <div
+        <button //changed from div due to error
           style={{ display: this.state.isShowing ? "block" : "none" }}
           className={hamburgerStyles.menu1}
           onClick={this.handleClick}
           onKeyDown={this.handleClick}
         >
           <MobileMenu />
-        </div>
+        </button>
       </div>
     )
   }

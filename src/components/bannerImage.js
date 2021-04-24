@@ -1,5 +1,5 @@
 import React from 'react'
-import variables from './variables.js'
+// import variables from './variables.js'
 import style from '../style/bannerImage.module.scss'
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"

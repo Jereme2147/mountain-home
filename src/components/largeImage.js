@@ -13,6 +13,7 @@ const LargeImage = ({ path }) => {
             ...GatsbyImageSharpFluid_withWebp
             originalName
           }
+          id
         }
       }
     }
@@ -30,7 +31,9 @@ const LargeImage = ({ path }) => {
               style={path.style}
             />
           )
-        }
+        } else {
+          return <div key={`${item.id}`}></div>
+      }
       })}
     </div>
   )

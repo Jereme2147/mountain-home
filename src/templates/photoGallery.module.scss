@@ -42,7 +42,7 @@
 .imageBox {
     @include images();
     @include desktop() {
-        width: 30%;
+        width: 40%;
     }
     width: 80%;
 }

@@ -93,7 +93,6 @@ const Services = () => {
           {/* These are dynamicly loaded.  To add galleries, add to contentful */}
           <h2 id="galleries">Galleries</h2>
           {data.allContentfulGallery.nodes.map(thing => {
-            {console.log("thing  ", thing)}
             return (
                 <TextOverImage
                   pic={thing.galleryImage.fluid}

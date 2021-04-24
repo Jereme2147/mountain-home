@@ -1,34 +1,34 @@
 //can be deleted.  created for to build reusable compoenent
 import React from 'react'
 import style from '../style/servicesTwo.module.scss'
-import variables from '../components/variables.js'
-import TextOverImage from "../components/textOverImage/textOverImage.js"
-import { graphql, useStaticQuery } from "gatsby"
+// import variables from '../components/variables.js'
+// import TextOverImage from "../components/textOverImage/textOverImage.js"
+// import { graphql, useStaticQuery } from "gatsby"
 
 
 const Services = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulNotRoofingSection {
-        edges {
-          node {
-            id
-            serviceTitle
-            serviceImage {
-              fluid(maxWidth: 600, quality: 50) {
-                ...GatsbyContentfulFluid_withWebp
-              }
-              title
-              id
-              file {
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allContentfulNotRoofingSection {
+  //       edges {
+  //         node {
+  //           id
+  //           serviceTitle
+  //           serviceImage {
+  //             fluid(maxWidth: 600, quality: 50) {
+  //               ...GatsbyContentfulFluid_withWebp
+  //             }
+  //             title
+  //             id
+  //             file {
+  //               url
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
     return (
       <div className={style.container} id="otherServices">
         <h2>
