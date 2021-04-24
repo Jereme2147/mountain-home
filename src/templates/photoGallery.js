@@ -82,13 +82,13 @@ const PhotoGallery = props => {
                     className={ratio >= 1 ? style.imageBox : style.imageBox2}
                     key={item.id + 10}
                   >
-                    <h3 className={style.picTitle}>
+                    {/* <h3 className={style.picTitle}>
                       {item.description ? item.description : ""}
-                    </h3>
+                    </h3> */}
                     <a href={item.file.url} target="__BLANK">
                       <Img
                         key={item.id}
-                        fluid={item.fluid}
+                        fluid={item.fluid} 
                         alt="roof pictures"
                         className={style.img}
                       />

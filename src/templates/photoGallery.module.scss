@@ -2,18 +2,25 @@
 @mixin images {
     //for images so I don't have two classes to change.
     //see imagebox and imagebox2
-    margin: 10px;
+    // margin: auto 10px 10px 10px;
+    margin: 20px;
+    // display: flex;
+    
     
 }
 .img {
     box-shadow: 10px 10px 5px $black;
+    height: 100%; //this is auto cropping, but it looks good
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .container {
     width: 100%;
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     h2{
         width: 100%;
         font-size: 3rem;
@@ -29,22 +36,25 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 //for landscape images
 .imageBox {
+    @include images();
     @include desktop() {
         width: 30%;
     }
-    width: 40%;
-    @include images();
+    width: 80%;
 }
 // for portrait images
 .imageBox2 {
+    @include images();
     @include desktop() {
         width: 20%;
     }
-    width: 30%;
-    @include images();
+    width: 80%;
+    
+    // margin-top: auto;
 }
 .picTitle {
     font-size: 1.5rem;

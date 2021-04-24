@@ -49,7 +49,7 @@ const Services = () => {
             })}
           </div> */}
           <div className={style.description}>
-            <p className={style.title}>Title One</p>
+            <p className={style.title}>Professional Services</p>
             <p className={style.explain}>
               With anything home improvement, it is the constant case that one
               component of the home will tie into another component. Therefore
