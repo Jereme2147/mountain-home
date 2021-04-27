@@ -10,11 +10,12 @@ import ContentFrame from '../components/contentFrame.js'
 import Services from '../sections/services.js'
 import ServicesTwo from '../sections/servicesTwo.js'
 import Contact from '../components/contact/contact.js'
-
+import PopUp from '../components/popup.js'
 
 const Index = () => {
   return (
     <Layout>
+      <PopUp /> 
       <MenuBar />
       <BannerImage banner={variables.landingImage} />
       <BannerText />
@@ -25,7 +26,7 @@ const Index = () => {
         </ContentFrame>
         <ContentFrame>
           <ServicesTwo />
-        </ContentFrame> 
+        </ContentFrame>  
         <Contact />
       </PageContent>
     </Layout>
