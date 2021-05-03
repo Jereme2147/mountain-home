@@ -12,10 +12,10 @@ import ServicesTwo from '../sections/servicesTwo.js'
 import Contact from '../components/contact/contact.js'
 import PopUp from '../components/popup.js'
 
-const Index = () => {
+const Index = ( { location }) => {
   return (
     <Layout>
-      <PopUp /> 
+      <PopUp location = { location } /> 
       <MenuBar />
       <BannerImage banner={variables.landingImage} />
       <BannerText />

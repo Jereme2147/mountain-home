@@ -1,1 +1,93 @@
 @import './reset.scss';
+
+.container {
+    width: 100%;
+    // position: relative;
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    @include desktop() {
+        // width: 70%;
+        top: 30px;
+        // left: 160px;
+    }
+    
+}
+.noContainer {
+    display: none;
+}
+.centerDesktop {
+    @include tiny() {
+        width: 100%;
+    }
+    display: flex;
+    justify-content: center;
+    @include desktop() {
+        position: absolute;
+        width: 80%;
+        // left: 350px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.desktopSpacer {
+    display: none;
+    @include desktop() {
+        display: flex;
+        width: 20%;
+    }
+    
+}
+.popUp {
+    background: $orange;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    border: 1px solid $white;
+    width: 90%;
+    h2 {
+        color: $white;
+        text-shadow: 2px 2px $darkGrey;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 10px;
+    }
+    @include desktop() {
+        width: 50%;
+        box-shadow: 4px 4px $darkGrey;
+
+        h2 {
+            font-size: 2rem;
+            width: 100%;
+
+        }
+    }
+}
+.buttonStyle {
+    padding: 5px;
+    width: 25%;
+    box-shadow: 2px 2px $darkGrey;
+    border-radius: 5px;
+    border-top: 2px solid $white;
+    border-left: 2px solid $white;
+    border-bottom: none;
+    border-right: none;
+    color: $darkGrey;
+    margin-bottom: 10px;
+    background-color: $lightGrey;
+    color: $white;
+    text-shadow: 1px 1px 1px $darkGrey;
+    @include desktop(){
+        width: 20%;
+        margin: 10px;
+        font-size: 1.3rem;
+        transition: 0.4s;
+        &:hover {
+         width: 26%;  
+         color: red; 
+        }
+    }
+}
