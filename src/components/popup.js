@@ -20,16 +20,15 @@ class PopUp extends React.Component {
     handleClick = () => {
         if(this.state.visible == true){
             this.setState({visible: false})
-            document.cookie = "off";
-            console.log(document.cookie)
+            // document.cookie = "off";
         }
     }
     getCookie = () => {
         if(this.state.visible == true){
-            console.log(document.cookie)
+            // console.log(document.cookie)
             return "view"
         }else {
-            console.log(document.cookie)
+            // console.log(document.cookie)
             return "off"
         }
         
@@ -39,7 +38,7 @@ class PopUp extends React.Component {
           <div //this first checks if on homepage, then checks if the X has been clicked to decide if visible.
           //pageLocation statement needs to be changed back to '/' for dev and "whatever URL post dev"
             className={
-              this.pageLocation() === "adoring-spence-ba47ff.netlify.app" &&
+              this.pageLocation() === "/adoring-spence-ba47ff.netlify.app" &&
               this.getCookie() == "view"
                 ? style.container
                 : style.noContainer
