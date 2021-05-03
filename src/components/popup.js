@@ -37,16 +37,16 @@ class PopUp extends React.Component {
     render() {
         return (
           <div //this first checks if on homepage, then checks if the X has been clicked to decide if visible.
+          //pageLocation statement needs to be changed back to '/' for dev and "whatever URL post dev"
             className={
-              this.pageLocation() === "/" && this.getCookie() == "view"
+              this.pageLocation() === "adoring-spence-ba47ff.netlify.app" &&
+              this.getCookie() == "view"
                 ? style.container
                 : style.noContainer
             }
           >
             <div className={style.centerDesktop}>
-                <div className={style.desktopSpacer}>
-
-                </div>
+              <div className={style.desktopSpacer}></div>
               <div className={style.popUp}>
                 <h2>
                   Ask us about our annual roof inspection and care services.{" "}
