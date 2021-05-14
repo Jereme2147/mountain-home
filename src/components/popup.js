@@ -48,9 +48,9 @@ class PopUp extends React.Component {
             <div className={style.centerDesktop}>
               <div className={style.desktopSpacer}></div>
               <div className={style.popUp}>
-                <h2>
+                <p>
                   Ask us about our annual roof inspection and care services.{" "}
-                </h2>
+                </p>
                 {/* Checks sets state visiblility to no */}
                 <button
                   className={style.buttonStyle}

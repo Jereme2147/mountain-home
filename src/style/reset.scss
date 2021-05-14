@@ -10,9 +10,9 @@ $gradientMenu: linear-gradient(90deg, $lightGrey, $darkGrey);
 $gradientContentFrame: linear-gradient(180deg, $white, $lightGrey);
 $submit: #0000FF;
 //    FONTS
-$title: font-family 'Montserrat', sans-serif;
-$body: font-family 'Hind Madurai', sans-serif;
-$menu: font-family 'Roboto', sans-serif;
+$title:'Montserrat', sans-serif;
+$body: 'Hind Madurai', sans-serif;
+$menu: 'Roboto', sans-serif;
 // Media queries
 
 @mixin desktop {

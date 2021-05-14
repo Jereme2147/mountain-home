@@ -44,29 +44,29 @@ module.exports = {
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts-v2`,
-      options: {
-        fonts: [
-          {
-            family: "Montserrat",
-            variable: true,
-            weights: ["200..900"],
-          },
-          {
-            family: "Hind Madurai",
-            variable: true,
-            weights: ["200..900"],
-          },
-          {
-            family: "Roboto",
-            variable: true,
-            weights: ["200..900"],
-          },
-        ],
-        display: 'swap'
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts-v2`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: "Montserrat",
+    //         // variable: true,
+    //         // weights: ["200..900"],
+    //       },
+    //       {
+    //         family: "Hind Madurai",
+    //         // variable: true,
+    //         // weights: ["200..900"],
+    //       },
+    //       {
+    //         family: "Roboto",
+    //         // variable: true,
+    //         // weights: ["200..900"],
+    //       },
+    //     ],
+    //     display: 'swap'
+    //   },
+    // },
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
