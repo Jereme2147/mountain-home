@@ -58,6 +58,14 @@ const Services = () => {
               decking and handrails, interior work, carpentry, and much more. So
               if there is a lingering project around the house, feel free to
               ask!{"  "}
+              <br></br>
+              <br></br>
+              <span>
+                We offer roof inspections for homebuyers and sellers, along with
+                scheduled inspection plans for those that may not be full time
+                residents and want reassurance that their investment is staying
+                dry!
+              </span>
             </p>
           </div>
         </div>
