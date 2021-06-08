@@ -10,12 +10,12 @@ import ContentFrame from '../components/contentFrame.js'
 import Services from '../sections/services.js'
 import ServicesTwo from '../sections/servicesTwo.js'
 import Contact from '../components/contact/contact.js'
-import PopUp from '../components/popup.js'
+// import PopUp from '../components/popup.js'
 
 const Index = ( { location }) => {
   return (
     <Layout>
-      <PopUp location = { location } /> 
+      {/* <PopUp location = { location } />  */}
       <MenuBar />
       <BannerImage banner={variables.landingImage} />
       <BannerText />
