@@ -64,7 +64,7 @@ const Services = () => {
           return (
             <div className={style.serviceContainer} key={item.node.id}>
               <div className={style.imgContainer}>
-                <a href={item.node.featuredImage[0].file.url} target="__BLANK">
+                <a href={item.node.featuredImage[0].file.url} aria-label="Read more about specific services" target="__BLANK">
                   <Img
                     key={item.node.featuredImage[0].id}
                     fluid={item.node.featuredImage[0].fluid}

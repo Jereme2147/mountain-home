@@ -9,7 +9,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Mountain Home Exteriors`,
-    description: `tbd`,
+    description: `tb`,
     author: `Jereme Daniels`,
   },
   plugins: [
@@ -22,6 +22,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     // {
     //   resolve: `gatsby-plugin-sass`,
     //   options: {
