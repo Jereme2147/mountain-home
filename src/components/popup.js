@@ -16,7 +16,7 @@ class PopUp extends React.Component {
 
     pageLocation = () => {
         console.log(this.state.url.pathname)
-        return (this.state.url.pathname)
+        return (this.state.url.pathname) 
     }
     handleClick = () => {
         if(this.state.visible == true){

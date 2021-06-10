@@ -7,13 +7,23 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 20%;
+    top: 35%;
+    animation: popUpFadeM 10s;
     @include desktop() {
         // width: 70%;
-        top: 30px;
+        animation: popUpFade 10s;
+        // top: 30px;
         // left: 160px;
     }
     
+}
+@keyframes popUpFade {
+    0% { opacity: 0;  top: 1000px;}
+    50% { opacity: 1; top: 35%;}
+}
+@keyframes popUpFadeM {
+    0% { opacity: 0;  top: 600px;}
+    50% { opacity: 1; top: 35%;}
 }
 .noContainer {
     display: none;
